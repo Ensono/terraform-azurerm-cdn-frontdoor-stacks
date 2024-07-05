@@ -2,11 +2,11 @@
 This Stacks [Terraform composite module](https://developer.hashicorp.com/terraform/language/modules/develop/composition) is designed to create an [Azure CDN FrontDoor (Standard/Premium)](https://docs.microsoft.com/en-us/azure/frontdoor/standard-premium/tier-comparison) resource.
 
 This module acts as an abstraction over a [third-party module](https://registry.terraform.io/modules/claranet/cdn-frontdoor/azurerm/7.4.0) from the Terraform registry. This decouples direct constraints between the calling root module and the third-party module. This decoupling has severval benefits:
-* Hierarchical input model `afd_base-configuration` which describes the relationship between the different base configuration objects. This model supports many different configuration options:
+* Hierarchical input model `afd_base_configuration` which describes the relationship between the different base configuration objects. This model supports many different configuration options:
     * multiple environments within a single Azure Front Door profile
     * single endpoint with multiple origin groups
     * multiple endpoints each with a single origin group
-* Hierarchical input model mapping to the third-party module inputs means the third-party module could be replace with no impact on the calling root module.
+* Hierarchical input model mapping to the third-party module inputs means the third-party module could be replaced with no to minimal impact on the calling root module.
 * If required, additional logic can be added to support advanced configuration.
 
 ## Roadmap
