@@ -1,0 +1,40 @@
+# check:
+#   - MEDIUM
+compact: true
+directory:
+  - .
+download-external-modules: true
+evaluate-variables: true
+framework:
+  - all
+output: cli
+quiet: true
+skip-check:
+  - #CKV_TF_1
+skip-framework:
+  - bitbucket_pipelines
+  - argo_workflows
+  - arm
+  - bicep
+  - cloudformation
+  - dockerfile
+  - github_configuration
+  - github_actions
+  - gitlab_configuration
+  - gitlab_ci
+  - bitbucket_configuration
+  - helm
+  #- json
+  #- yaml
+  - kubernetes
+  - kustomize
+  - openapi
+  - sca_package
+  - sca_image
+  #- secrets
+  - serverless
+  #- terraform
+  - terraform_plan
+soft-fail: false
+skip-path:
+ - .external_modules

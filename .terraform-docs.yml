@@ -1,0 +1,53 @@
+---
+# Template file - DO NOT EDIT
+formatter: "markdown"
+
+settings:
+  anchor: false
+  lockfile: false
+
+output:
+  file: "README.md"
+
+sections:
+  hide: [requirements]
+
+content: |-
+  ## Contributing
+  This repository uses the [pre-commit](https://pre-commit.com/) git hook framework which can update and format some files enforcing our Terraform code module best-practices.
+
+  More details are available in the [CONTRIBUTING.md](./CONTRIBUTING.md#pull-request-process) file.
+
+  ## Usage
+  Examples can be found at the bottom taken from the `examples` directory.
+
+
+  {{ .Providers }}
+
+  {{ .Modules }}
+
+  {{ .Resources }}
+
+  {{ .Inputs }}
+
+  {{ .Outputs }}
+
+  ## Examples
+  There are three common configurations which are desribed below:
+  ### Single Environment and Endpoint with Multiple Origin Groups
+
+  ```hcl
+  {{ include "examples/main/example-single-env-and-endpoint-with-multiple-origin-groups.tfvars" }}
+  ```
+
+  ### Single Environment with multiple Endpoints each with an Origin Group
+  ```hcl
+  {{ include "examples/main/example-single-env-with multiple-endpoints-each-with-an-origin-group.tfvars" }}
+  ```
+
+  ### Multiple Environments with a Single Endpoint with Multiple Origin Groups
+  ```hcl
+  {{ include "examples/main/example-multiple-env-single-endpoint-with-multiple-origin-groups.tfvars" }}
+  ```
+
+...
